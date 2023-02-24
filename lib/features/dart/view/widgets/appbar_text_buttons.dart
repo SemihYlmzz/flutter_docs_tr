@@ -1,21 +1,28 @@
+import 'package:dart_lang_tr/features/_providers/dart/main_page_index.dart';
+import 'package:dart_lang_tr/features/dart/constants/enums.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AppbarTextButton extends StatelessWidget {
+class AppbarTextButton extends ConsumerWidget {
   final String buttonText;
-  final bool isSelected;
+  final MainPages currentPage;
+  final MainPages thisPage;
   const AppbarTextButton({
     super.key,
     required this.buttonText,
-    required this.isSelected,
+    required this.currentPage,
+    required this.thisPage,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
         Expanded(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ref.read(dartMainPageIndexProvider.notifier).state = thisPage;
+            },
             style: ElevatedButton.styleFrom().copyWith(
               elevation: const MaterialStatePropertyAll(0),
               overlayColor: const MaterialStatePropertyAll(Colors.transparent),
@@ -43,7 +50,7 @@ class AppbarTextButton extends StatelessWidget {
           duration: const Duration(milliseconds: 370),
           height: 4,
           width: 80,
-          color: isSelected == false ? Colors.transparent : Colors.blue,
+          color: currentPage != thisPage ? Colors.transparent : Colors.blue,
         )
       ],
     );
