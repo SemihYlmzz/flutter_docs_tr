@@ -1,36 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import '../../../../core/constants/assets/image_assets.dart';
+import '../widgets/appbar_text_buttons.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData.dark(
-        useMaterial3: true,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class DartHome extends StatefulWidget {
+  const DartHome({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<DartHome> createState() => _DartHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _DartHomeState extends State<DartHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 18.0),
                 child: SvgPicture.asset(
-                  'assets/images/test.svg',
+                  Assets.assetsImagesDartTextWhite,
                   width: 90,
                   fit: BoxFit.fitWidth,
                 ),
@@ -102,56 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class AppbarTextButton extends StatelessWidget {
-  final String buttonText;
-  final bool isSelected;
-  const AppbarTextButton({
-    super.key,
-    required this.buttonText,
-    required this.isSelected,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom().copyWith(
-              elevation: const MaterialStatePropertyAll(0),
-              overlayColor: const MaterialStatePropertyAll(Colors.transparent),
-              backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-                (states) {
-                  return Colors.transparent;
-                },
-              ),
-              foregroundColor: MaterialStateProperty.resolveWith<Color?>(
-                (states) {
-                  if (states.contains(MaterialState.hovered)) {
-                    return Colors.lightBlue;
-                  }
-                  return Colors.white;
-                },
-              ),
-            ),
-            child: Text(
-              buttonText,
-              style: const TextStyle(fontSize: 16),
-            ),
-          ),
-        ),
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 370),
-          height: 4,
-          width: 80,
-          color: isSelected == false ? Colors.transparent : Colors.blue,
-        )
-      ],
     );
   }
 }
