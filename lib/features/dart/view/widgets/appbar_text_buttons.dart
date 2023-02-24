@@ -1,3 +1,4 @@
+import 'package:dart_lang_tr/core/constants/app_constants.dart';
 import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
 import 'package:dart_lang_tr/features/_providers/dart/main_page_index.dart';
 import 'package:dart_lang_tr/features/dart/constants/enums.dart';
@@ -6,17 +7,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppbarTextButton extends ConsumerWidget {
   final String buttonText;
-  final MainPages currentPage;
   final MainPages thisPage;
   const AppbarTextButton({
     super.key,
     required this.buttonText,
-    required this.currentPage,
     required this.thisPage,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final currentPage = ref.watch(dartMainPageIndexProvider);
     return Column(
       children: [
         Expanded(
@@ -43,12 +43,13 @@ class AppbarTextButton extends ConsumerWidget {
             ),
             child: Text(
               buttonText,
-              style: const TextStyle(fontSize: 16),
+              style: const TextStyle(
+                  fontSize: 16, color: DartColorsDark.whiterTextColor),
             ),
           ),
         ),
         AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
+          duration: AppConstants.durationFast,
           height: 4,
           width: 80,
           color: (currentPage != thisPage || currentPage == MainPages.home)
