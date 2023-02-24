@@ -3,6 +3,5 @@ enum MainPages {
   overview,
   docs,
   community,
-  tryDart,
   getDart,
 }

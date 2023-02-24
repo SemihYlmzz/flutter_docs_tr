@@ -1,3 +1,4 @@
+import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
 import 'package:dart_lang_tr/features/_providers/dart/main_page_index.dart';
 import 'package:dart_lang_tr/features/dart/constants/enums.dart';
 import 'package:flutter/material.dart';
@@ -47,10 +48,12 @@ class AppbarTextButton extends ConsumerWidget {
           ),
         ),
         AnimatedContainer(
-          duration: const Duration(milliseconds: 370),
+          duration: const Duration(milliseconds: 200),
           height: 4,
           width: 80,
-          color: currentPage != thisPage ? Colors.transparent : Colors.blue,
+          color: (currentPage != thisPage || currentPage == MainPages.home)
+              ? Colors.transparent
+              : DartColorsDark.darkBlue,
         )
       ],
     );
