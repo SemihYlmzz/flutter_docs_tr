@@ -1,7 +1,6 @@
-import 'drawer_item2_model.dart';
-
-class DrawerItem1Model {
+class DrawerItemModel {
   final String itemText;
-  final List<DrawerItem2Model> items;
-  DrawerItem1Model(this.itemText, this.items);
+  final List<DrawerItemModel> items;
+  final int tier;
+  DrawerItemModel(this.itemText, this.items, this.tier);
 }

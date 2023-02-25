@@ -1,4 +1,3 @@
-import 'package:dart_lang_tr/features/dart/model/drawer_item2_model.dart';
 import 'package:dart_lang_tr/features/dart/view/widgets/drawer_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,22 +10,38 @@ class DartHomeDrawer extends ConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    List<DrawerItem1Model> itemsList = [
-      DrawerItem1Model('Overview', []),
-      DrawerItem1Model('Community', []),
-      DrawerItem1Model('Try Dart', []),
-      DrawerItem1Model('Get Dart', []),
-      DrawerItem1Model('Docs', []),
-      DrawerItem1Model(
-          'Samples & tutorials', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Language', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Core libraries', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Packages', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Development', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model(
-          'Tools & techniques', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Resources', [DrawerItem2Model('itemText', [])]),
-      DrawerItem1Model('Related sites', [DrawerItem2Model('itemText', [])]),
+    List<DrawerItemModel> itemsList = [
+      DrawerItemModel('Overview', [], 0),
+      DrawerItemModel('Community', [], 0),
+      DrawerItemModel('Try Dart', [], 0),
+      DrawerItemModel('Get Dart', [], 0),
+      DrawerItemModel('Docs', [], 0),
+      DrawerItemModel(
+          'Samples & tutorials',
+          [
+            DrawerItemModel('Language samples', [], 1),
+            DrawerItemModel(
+                'Codelabs',
+                [
+                  DrawerItemModel('List of Dart codelabs', [], 2),
+                  DrawerItemModel('Language cheatsheet', [], 2),
+                  DrawerItemModel('Iterable collections', [], 2),
+                  DrawerItemModel('Asynchronous programming', [], 2),
+                  DrawerItemModel('Null safety', [], 2),
+                ],
+                1),
+            DrawerItemModel('Tutorials', [], 1),
+          ],
+          0),
+      DrawerItemModel('Language', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel(
+          'Core libraries', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel('Packages', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel('Development', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel(
+          'Tools & techniques', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel('Resources', [DrawerItemModel('itemText', [], 1)], 0),
+      DrawerItemModel('Related sites', [DrawerItemModel('itemText', [], 1)], 0),
     ];
 
     return Drawer(
@@ -34,18 +49,19 @@ class DartHomeDrawer extends ConsumerWidget {
       child: Column(
         children: [
           const SizedBox(height: 75),
-          const Divider(
-            height: 0.1,
-          ),
+          const Divider(height: 0.1),
           const SizedBox(height: 45),
           Expanded(
             child: ListView.builder(
                 itemCount: itemsList.length,
                 itemBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                      child: DrawerItems(
-                        itemText: itemsList[index].itemText,
-                        isExpandable: itemsList[index].items.isNotEmpty,
+                      padding: EdgeInsets.only(
+                        right: 16,
+                        left: 16,
+                        top: index == 5 ? 8 : 0,
+                      ),
+                      child: DrawerItemHeader(
+                        drawerItemModel: itemsList[index],
                       ),
                     )),
           ),

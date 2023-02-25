@@ -1,66 +1,61 @@
-import 'package:dart_lang_tr/core/constants/app_constants.dart';
+import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
+import 'package:dart_lang_tr/features/dart/model/drawer_item1_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/colors/dart_colors.dart';
-import 'expandable_icon.dart';
-
-class DrawerItems extends StatefulWidget {
-  final String itemText;
-  final bool isExpandable;
-  const DrawerItems({
+class DrawerItemHeader extends StatefulWidget {
+  final DrawerItemModel drawerItemModel;
+  const DrawerItemHeader({
     super.key,
-    this.isExpandable = false,
-    required this.itemText,
+    required this.drawerItemModel,
   });
 
   @override
-  State<DrawerItems> createState() => _DrawerItemsState();
+  State<DrawerItemHeader> createState() => _DrawerItemHeaderState();
 }
 
-class _DrawerItemsState extends State<DrawerItems> {
+class _DrawerItemHeaderState extends State<DrawerItemHeader> {
   bool isExpanded = false;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        isExpanded = !isExpanded;
-        setState(() {});
-      },
-      child: AnimatedContainer(
-        duration: AppConstants.durationFast,
-        height: isExpanded
-            ? 160
-            : widget.isExpandable
-                ? 61
-                : 53,
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: Padding(
-            padding: EdgeInsets.only(top: widget.isExpandable ? 25.0 : 20),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      widget.itemText,
-                      style: const TextStyle(
-                        color: DartColorsDark.normalTextColor,
-                        fontSize: 18,
-                      ),
-                    ),
-                    if (widget.isExpandable)
-                      ExpandableIcon(isExpanded: isExpanded),
-                  ],
-                ),
-                if (widget.isExpandable)
-                  const Column(
-                    children: [],
-                  ),
-              ],
-            ),
-          ),
+    List<Widget> mywidgets = [];
+    for (int i = 0; i < widget.drawerItemModel.items.length; i++) {
+      mywidgets.add(
+          DrawerItemHeader(drawerItemModel: widget.drawerItemModel.items[i]));
+    }
+    return Padding(
+      padding: EdgeInsets.only(
+          left: widget.drawerItemModel.tier == 0
+              ? 0
+              : (widget.drawerItemModel.tier - 1) * 16),
+      child: Theme(
+        data: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
         ),
+        child: widget.drawerItemModel.items.isNotEmpty
+            ? ExpansionTile(
+                title: Text(
+                  widget.drawerItemModel.itemText,
+                  style: TextStyle(
+                      fontSize: widget.drawerItemModel.tier > 0 ? 14 : 18),
+                ),
+                collapsedIconColor: DartColorsDark.normalTextColor,
+                collapsedTextColor: DartColorsDark.normalTextColor,
+                iconColor: DartColorsDark.normalTextColor,
+                textColor: DartColorsDark.normalTextColor,
+                shape: InputBorder.none,
+                children: mywidgets,
+              )
+            : ListTile(
+                title: Text(
+                  widget.drawerItemModel.itemText,
+                  style: TextStyle(
+                    fontSize: widget.drawerItemModel.tier > 0 ? 14 : 18,
+                    color: DartColorsDark.normalTextColor,
+                  ),
+                ),
+                onTap: () {},
+              ),
       ),
     );
   }
