@@ -7,9 +7,9 @@ export 'package:video_player/video_player.dart';
 export 'package:animate_do/animate_do.dart';
 export 'package:local_hero/local_hero.dart';
 
-export '_providers/index.dart';
-export 'dart/index.dart';
-export 'flutter/index.dart';
-export 'provider/index.dart';
+export '_providers/_providers.dart';
+export 'dart/dart.dart';
+export 'flutter/flutter.dart';
+export 'provider/provider.dart';
 
 export '../core/core.dart';

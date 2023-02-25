@@ -1,2 +1,2 @@
-export 'components/index.dart';
-export 'constants/index.dart';
+export 'components/components.dart';
+export 'constants/constants.dart';

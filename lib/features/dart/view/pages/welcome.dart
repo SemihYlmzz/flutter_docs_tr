@@ -51,9 +51,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         const SizedBox(height: 16),
         const DartGit(),
         // TODO: Info1 Part
-        // TODO: Info2 Part
-        // TODO: Info3 Part
-        // TODO: Info4 Part
+        // Todo: Info2 Part
+        // Todo: Info3 Part
+        // Todo: Info4 Part
         // Todo: Try Dart Part
 
         const SizedBox(height: 700),
