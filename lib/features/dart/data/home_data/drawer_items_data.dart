@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../model/drawer_item1_model.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class Data {
   static List<DrawerItemModel> itemsList = [

@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../pages/welcome.dart';
-import '../../widgets/home_widgets/stable_top_container.dart';
-import 'dart_home_appbar.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class DartMainBody extends ConsumerStatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;

@@ -1,10 +1,4 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../constants/dart_constants.dart';
-import '../../widgets/home_widgets/dart_logo_white_texted.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class DartAppBar extends ConsumerWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;

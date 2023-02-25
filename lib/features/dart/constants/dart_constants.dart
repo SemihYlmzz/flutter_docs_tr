@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../view/widgets/home_widgets/appbar_text_buttons.dart';
-import 'enums.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class DartConstants {
   static isWidthSmall({context}) => (MediaQuery.of(context).size.width <= 960);

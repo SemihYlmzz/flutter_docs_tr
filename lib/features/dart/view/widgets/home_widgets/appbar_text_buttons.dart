@@ -1,9 +1,4 @@
-import 'package:dart_lang_tr/core/constants/app_constants.dart';
-import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
-import 'package:dart_lang_tr/features/_providers/dart/main_page_index.dart';
-import 'package:dart_lang_tr/features/dart/constants/enums.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class AppbarTextButton extends ConsumerWidget {
   final String buttonText;

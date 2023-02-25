@@ -1,7 +1,4 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../../core/constants/colors/dart_colors.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class StableTopContainer extends StatelessWidget {
   const StableTopContainer({

@@ -1,8 +1,4 @@
-import 'package:dart_lang_tr/features/dart/view/widgets/home_widgets/drawer_items.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../../core/constants/colors/dart_colors.dart';
-import '../../../data/home_data/drawer_items_data.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class DartHomeDrawer extends ConsumerWidget {
   const DartHomeDrawer({

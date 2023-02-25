@@ -1,11 +1,4 @@
-import 'package:dart_lang_tr/features/dart/constants/video_assets.dart';
-import 'package:dart_lang_tr/features/dart/constants/image_assets.dart'
-    as image;
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:video_player/video_player.dart';
-
-import '../../../../core/constants/colors/dart_colors.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -23,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
 
     _controller =
-        VideoPlayerController.asset(Assets.assetsVideosDartVideosHotReload)
+        VideoPlayerController.asset(VideoAssets.assetsVideosDartVideosHotReload)
           ..addListener(() {
             setState(() {});
           })
@@ -86,7 +79,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ),
         const SizedBox(height: 24),
         Image.asset(
-          image.Assets.assetsImagesDartImagesSupportedByGoogle,
+          ImageAssets.assetsImagesDartImagesSupportedByGoogle,
           width: 180,
         ),
         const SizedBox(height: 16),
@@ -111,7 +104,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 }),
                 cursor: SystemMouseCursors.click,
                 child: SvgPicture.asset(
-                    image.Assets.assetsImagesDartImagesGithubIcon,
+                    ImageAssets.assetsImagesDartImagesGithubIcon,
                     width: 18,
                     colorFilter:
                         ColorFilter.mode(gitIconColor, BlendMode.srcIn)),

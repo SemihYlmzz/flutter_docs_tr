@@ -1,8 +1,4 @@
-import 'package:dart_lang_tr/core/constants/colors/dart_colors.dart';
-import 'package:flutter/material.dart';
-
-import '../parts/home_parts/dart_drawer.dart';
-import '../parts/home_parts/dart_home_body.dart';
+import 'package:dart_lang_tr/features/features.dart';
 
 class DartHome extends StatelessWidget {
   const DartHome({super.key});
