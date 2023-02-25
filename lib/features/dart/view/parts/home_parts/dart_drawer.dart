@@ -257,24 +257,24 @@ class DartHomeDrawer extends ConsumerWidget {
           ],
           tier: 0),
       DrawerItemModel(
-          itemText: 'Related sites',
-          items: [
-            DrawerItemModel(
-                itemText: 'API reference',
-                tier: 1,
-                iconData: Icons.open_in_new),
-            DrawerItemModel(
-                itemText: 'Blog', tier: 1, iconData: Icons.open_in_new),
-            DrawerItemModel(
-                itemText: 'DartPad (online editor)',
-                tier: 1,
-                iconData: Icons.open_in_new),
-            DrawerItemModel(
-                itemText: 'Flutter', tier: 1, iconData: Icons.open_in_new),
-            DrawerItemModel(
-                itemText: 'Package site', tier: 1, iconData: Icons.open_in_new),
-          ],
-          tier: 0),
+        itemText: 'Related sites',
+        items: [
+          DrawerItemModel(
+              itemText: 'API reference', tier: 1, iconData: Icons.open_in_new),
+          DrawerItemModel(
+              itemText: 'Blog', tier: 1, iconData: Icons.open_in_new),
+          DrawerItemModel(
+              itemText: 'DartPad (online editor)',
+              tier: 1,
+              iconData: Icons.open_in_new),
+          DrawerItemModel(
+              itemText: 'Flutter', tier: 1, iconData: Icons.open_in_new),
+          DrawerItemModel(
+              itemText: 'Package site', tier: 1, iconData: Icons.open_in_new),
+        ],
+        tier: 0,
+        isExpanded: true,
+      ),
     ];
 
     return Drawer(

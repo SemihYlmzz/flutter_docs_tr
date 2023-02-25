@@ -1,8 +1,9 @@
+import 'package:dart_lang_tr/features/dart/constants/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:local_hero/local_hero.dart';
 
-import '../../../../core/constants/assets/image_assets.dart';
 import '../../../_providers/dart/main_page_index.dart';
 import '../../constants/enums.dart';
 
@@ -23,10 +24,13 @@ class DartLogoWhiteTexted extends ConsumerWidget {
             ref.read(dartMainPageIndexProvider.notifier).state = MainPages.home;
           }
         },
-        child: SvgPicture.asset(
-          Assets.assetsImagesDartTextWhite,
-          width: 90,
-          fit: BoxFit.fitWidth,
+        child: LocalHero(
+          tag: UniqueKey,
+          child: SvgPicture.asset(
+            Assets.assetsImagesDartImagesDartTextWhite,
+            width: 90,
+            fit: BoxFit.fitWidth,
+          ),
         ),
       ),
     );
