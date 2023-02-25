@@ -8,7 +8,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  Color gitIconColor = DartColorsDark.normalTextColor;
   late VideoPlayerController _controller;
 
   @override
@@ -37,13 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          constraints: const BoxConstraints(maxWidth: 1340),
-          child: AspectRatio(
-            aspectRatio: 16 / 9,
-            child: VideoPlayer(_controller),
-          ),
-        ),
+        HotReloadVideo(controller: _controller),
         const SizedBox(height: 64),
         const Text(
           'Dart is a client-optimized language for fast apps on any platform',
@@ -52,66 +45,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         const SizedBox(
           height: 16,
         ),
-        MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {},
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                width: 140,
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.play_circle_fill, color: DartColorsDark.blue),
-                    SizedBox(width: 8),
-                    Text(
-                      'Watch video',
-                      style: TextStyle(
-                          color: DartColorsDark.blue,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
+        const IconTextButton(),
         const SizedBox(height: 24),
-        Image.asset(
-          ImageAssets.assetsImagesDartImagesSupportedByGoogle,
-          width: 180,
-        ),
+        const SupportedByGoogle(),
         const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SelectableText(
-              'Dart is free and open source',
-              style: TextStyle(
-                  color: DartColorsDark.normalTextColor, fontSize: 18),
-            ),
-            const SizedBox(
-              width: 4,
-            ),
-            StatefulBuilder(builder: (context, setGithubIconState) {
-              return MouseRegion(
-                onEnter: (event) => setGithubIconState(() {
-                  gitIconColor = DartColorsDark.whiterTextColor;
-                }),
-                onExit: (event) => setGithubIconState(() {
-                  gitIconColor = DartColorsDark.normalTextColor;
-                }),
-                cursor: SystemMouseCursors.click,
-                child: SvgPicture.asset(
-                    ImageAssets.assetsImagesDartImagesGithubIcon,
-                    width: 18,
-                    colorFilter:
-                        ColorFilter.mode(gitIconColor, BlendMode.srcIn)),
-              );
-            }),
-          ],
-        ),
+        const DartGit(),
+        // TODO: Info1 Part
+        // TODO: Info2 Part
+        // TODO: Info3 Part
+        // TODO: Info4 Part
+        // Todo: Try Dart Part
+
         const SizedBox(height: 700),
         const Text('Dart is free and open source'),
       ],
