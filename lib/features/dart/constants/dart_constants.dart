@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../view/widgets/appbar_text_buttons.dart';
-import '../view/widgets/drawer_items.dart';
 import 'enums.dart';
 
 class DartConstants {
@@ -14,36 +13,4 @@ class DartConstants {
     AppbarTextButton(buttonText: 'Get Dart', thisPage: MainPages.getDart),
     SizedBox(width: 16),
   ];
-
-  //   DrawerItems1(),
-  //   DrawerItems1(),
-  //   DrawerItems1(),
-  //   DrawerItems1(),
-  //   DrawerItems1(),
-  //   SizedBox(height: 10),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  //   DrawerItems1(
-  //     isExpandable: true,
-  //   ),
-  // ];
 }

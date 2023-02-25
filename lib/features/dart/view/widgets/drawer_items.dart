@@ -47,12 +47,23 @@ class _DrawerItemHeaderState extends State<DrawerItemHeader> {
                 children: mywidgets,
               )
             : ListTile(
-                title: Text(
-                  widget.drawerItemModel.itemText,
-                  style: TextStyle(
-                    fontSize: widget.drawerItemModel.tier > 0 ? 14 : 18,
-                    color: DartColorsDark.normalTextColor,
-                  ),
+                title: Row(
+                  children: [
+                    Text(
+                      widget.drawerItemModel.itemText,
+                      style: TextStyle(
+                        fontSize: widget.drawerItemModel.tier > 0 ? 14 : 18,
+                        color: DartColorsDark.normalTextColor,
+                      ),
+                    ),
+                    const SizedBox(width: 5),
+                    if (widget.drawerItemModel.iconData != null)
+                      Icon(
+                        widget.drawerItemModel.iconData!,
+                        color: DartColorsDark.normalTextColor,
+                        size: 13,
+                      )
+                  ],
                 ),
                 onTap: () {},
               ),
