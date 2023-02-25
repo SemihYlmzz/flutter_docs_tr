@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../view/widgets/appbar_text_buttons.dart';
+import '../view/widgets/home_widgets/appbar_text_buttons.dart';
 import 'enums.dart';
 
 class DartConstants {

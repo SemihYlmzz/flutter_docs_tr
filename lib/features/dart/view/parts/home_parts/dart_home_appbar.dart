@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../constants/dart_constants.dart';
-import '../../widgets/dart_logo_white_texted.dart';
+import '../../widgets/home_widgets/dart_logo_white_texted.dart';
 
 class DartAppBar extends ConsumerWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;

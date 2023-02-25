@@ -4,8 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:local_hero/local_hero.dart';
 
-import '../../../_providers/dart/main_page_index.dart';
-import '../../constants/enums.dart';
+import '../../../../_providers/dart/main_page_index.dart';
+import '../../../constants/enums.dart';
 
 class DartLogoWhiteTexted extends ConsumerWidget {
   final bool isSendingHome;
