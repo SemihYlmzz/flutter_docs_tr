@@ -8,21 +8,21 @@
             "name": "dart_lang_tr",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_dev.dart",
+            "program": "lib/main_development.dart",
         },
         {
             "name": "dart_lang_tr (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
-            "program": "lib/main_dev.dart",
+            "program": "lib/main_development.dart",
         },
         {
             "name": "dart_lang_tr (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
-            "program": "lib/main_dev.dart",
+            "program": "lib/main_development.dart",
         }
     ]
 }
