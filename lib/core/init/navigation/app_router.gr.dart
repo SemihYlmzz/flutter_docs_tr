@@ -17,7 +17,7 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    HomeRoute.name: (routeData) {
+    DocumentsRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const DocumentsView(),
@@ -34,26 +34,26 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          HomeRoute.name,
+          DocumentsRoute.name,
           path: '/',
         ),
         RouteConfig(
           DartRoute.name,
-          path: '/dart-view',
+          path: '/dart',
         ),
       ];
 }
 
 /// generated route for
 /// [DocumentsView]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute()
+class DocumentsRoute extends PageRouteInfo<void> {
+  const DocumentsRoute()
       : super(
-          HomeRoute.name,
+          DocumentsRoute.name,
           path: '/',
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'DocumentsRoute';
 }
 
 /// generated route for
@@ -62,7 +62,7 @@ class DartRoute extends PageRouteInfo<void> {
   const DartRoute()
       : super(
           DartRoute.name,
-          path: '/dart-view',
+          path: '/dart',
         );
 
   static const String name = 'DartRoute';

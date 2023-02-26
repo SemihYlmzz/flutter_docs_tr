@@ -1,5 +1,4 @@
 import '../../../features.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});

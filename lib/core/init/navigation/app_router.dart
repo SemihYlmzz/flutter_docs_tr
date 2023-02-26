@@ -8,9 +8,11 @@ part 'app_router.gr.dart';
     AutoRoute(
       page: DocumentsView,
       initial: true,
+      path: '/',
     ),
     AutoRoute(
       page: DartView,
+      path: '/dart',
     ),
   ],
 )
