@@ -1,4 +1,4 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../features.dart';
 
 class Data {
   static List<DrawerItemModel> itemsList = [

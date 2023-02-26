@@ -1,4 +1,4 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../../features.dart';
 
 class DartLogoWhiteTexted extends ConsumerWidget {
   final bool isSendingHome;

@@ -1,18 +1,17 @@
-import 'package:flutter/material.dart';
-
-import 'features/dart/view/pages/home.dart';
+import 'features/features.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  App({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(
-        useMaterial3: true,
-      ),
+    return MaterialApp.router(
+      theme: ThemeData.dark(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      home: const DartHome(),
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

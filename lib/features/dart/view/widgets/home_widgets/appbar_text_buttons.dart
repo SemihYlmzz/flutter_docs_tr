@@ -1,4 +1,4 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../../features.dart';
 
 class AppbarTextButton extends ConsumerWidget {
   final String buttonText;
@@ -44,7 +44,7 @@ class AppbarTextButton extends ConsumerWidget {
           ),
         ),
         AnimatedContainer(
-          duration: AppConstants.durationFast,
+          duration: ApplicationConstants.DURATION400,
           height: 4,
           width: 80,
           color: (currentPage != thisPage || currentPage == MainPages.home)

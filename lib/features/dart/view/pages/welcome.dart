@@ -1,4 +1,4 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../features.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatefulWidget {

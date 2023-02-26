@@ -1,7 +1,7 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../features.dart';
 
-class DartHome extends StatelessWidget {
-  const DartHome({super.key});
+class DartView extends StatelessWidget {
+  const DartView({super.key});
 
   @override
   Widget build(BuildContext context) {

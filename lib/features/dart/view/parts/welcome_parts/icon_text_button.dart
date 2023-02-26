@@ -1,4 +1,4 @@
-import 'package:dart_lang_tr/features/features.dart';
+import '../../../../features.dart';
 
 class IconTextButton extends StatelessWidget {
   const IconTextButton({
