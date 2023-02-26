@@ -1,7 +1,7 @@
-part of home.dart;
+part of documents.dart;
 
-class HomeDesktop extends StatelessWidget {
-  const HomeDesktop({super.key});
+class DocumentsDesktop extends StatelessWidget {
+  const DocumentsDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {

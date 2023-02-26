@@ -5,6 +5,4 @@ export '../core/core.dart';
 export '../providers/providers.dart';
 
 export 'dart/dart.dart';
-export 'flutter/flutter.dart';
-export 'provider/provider.dart';
-export 'home/home.dart';
+export 'documents/documents.dart';

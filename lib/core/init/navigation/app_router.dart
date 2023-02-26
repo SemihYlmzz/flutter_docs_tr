@@ -6,7 +6,7 @@ part 'app_router.gr.dart';
   replaceInRouteName: 'View,Route',
   routes: <AutoRoute>[
     AutoRoute(
-      page: HomeView,
+      page: DocumentsView,
       initial: true,
     ),
     AutoRoute(

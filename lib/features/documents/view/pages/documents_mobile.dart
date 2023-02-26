@@ -1,7 +1,7 @@
-part of home.dart;
+part of documents.dart;
 
-class HomeMobile extends StatelessWidget {
-  const HomeMobile({super.key});
+class DocumentsMobile extends StatelessWidget {
+  const DocumentsMobile({super.key});
 
   @override
   Widget build(BuildContext context) {

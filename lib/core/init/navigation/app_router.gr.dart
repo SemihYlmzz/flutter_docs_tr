@@ -20,7 +20,7 @@ class _$AppRouter extends RootStackRouter {
     HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const HomeView(),
+        child: const DocumentsView(),
       );
     },
     DartRoute.name: (routeData) {
@@ -45,7 +45,7 @@ class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [HomeView]
+/// [DocumentsView]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute()
       : super(
