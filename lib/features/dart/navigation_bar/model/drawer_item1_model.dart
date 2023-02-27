@@ -1,4 +1,4 @@
-import '../../features.dart';
+import '../../../features.dart';
 
 class DrawerItemModel {
   final String itemText;

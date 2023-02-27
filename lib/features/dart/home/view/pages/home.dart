@@ -1,4 +1,4 @@
-import '../../../features.dart';
+import '../../../../features.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -153,6 +153,116 @@ class ImagedInfoCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class HotReloadVideo extends StatelessWidget {
+  const HotReloadVideo({
+    super.key,
+    required VideoPlayerController controller,
+  }) : _controller = controller;
+
+  final VideoPlayerController _controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 1340),
+      child: AspectRatio(
+        aspectRatio: 16 / 9,
+        child: VideoPlayer(_controller),
+      ),
+    );
+  }
+}
+
+class IconTextButton extends StatelessWidget {
+  const IconTextButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {},
+        child: Center(
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            width: 140,
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.play_circle_fill, color: DartColorsDark.blue),
+                SizedBox(width: 8),
+                Text(
+                  'Watch video',
+                  style: TextStyle(
+                      color: DartColorsDark.blue, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SupportedByGoogle extends StatelessWidget {
+  const SupportedByGoogle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      ImageAssets.assetsImagesDartImagesSupportedByGoogle,
+      width: 180,
+    );
+  }
+}
+
+class DartGit extends StatefulWidget {
+  const DartGit({super.key});
+
+  @override
+  State<DartGit> createState() => _DartGitState();
+}
+
+class _DartGitState extends State<DartGit> {
+  Color gitIconColor = DartColorsDark.normalTextColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SelectableText(
+          'Dart is free and open source',
+          style: TextStyle(color: DartColorsDark.normalTextColor, fontSize: 18),
+        ),
+        const SizedBox(
+          width: 4,
+        ),
+        StatefulBuilder(builder: (context, setGithubIconState) {
+          return MouseRegion(
+            onEnter: (event) => setGithubIconState(() {
+              gitIconColor = DartColorsDark.whiterTextColor;
+            }),
+            onExit: (event) => setGithubIconState(() {
+              gitIconColor = DartColorsDark.normalTextColor;
+            }),
+            cursor: SystemMouseCursors.click,
+            child: SvgPicture.asset(
+                ImageAssets.assetsImagesDartImagesGithubIcon,
+                width: 18,
+                colorFilter: ColorFilter.mode(gitIconColor, BlendMode.srcIn)),
+          );
+        }),
+      ],
     );
   }
 }
