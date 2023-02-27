@@ -125,8 +125,16 @@ class DartAppBar extends ConsumerWidget {
           ),
           if (!DartConstants.isWidthSmall(context: context))
             FadeIn(
-              child: const Row(
-                children: DartConstants.appbarTextButtons,
+              child: Row(
+                children: [
+                  ...DartConstants.appbarTextButtons,
+                  IconButton(
+                    onPressed: () {
+                      context.router.navigateNamed('/');
+                    },
+                    icon: const Icon(Icons.exit_to_app_outlined),
+                  ),
+                ],
               ),
             )
         ],

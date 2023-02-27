@@ -62,24 +62,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               children: [
                 Row(),
                 ImagedInfoCard(
-                  imagePath: ImageAssets
-                      .assetsImagesDartImagesMultiplatformPerformanceLightOp12x,
+                  imagePath: DartImages.multiPlatPerf,
                   topText: 'Optimized',
                   bottomText: 'For UI',
                   description:
                       'Develop with a programming language specialized around the needs of user interface creation',
                 ),
                 ImagedInfoCard(
-                  imagePath: ImageAssets
-                      .assetsImagesDartImagesClientOptimisedLightOp12x,
+                  imagePath: DartImages.clientOpt,
                   topText: 'Productive',
                   bottomText: 'Development',
                   description:
                       'Make changes iteratively: use hot reload to see the result instantly in your running app',
                 ),
                 ImagedInfoCard(
-                  imagePath:
-                      ImageAssets.assetsImagesDartImagesProductiveDevLightOp12x,
+                  imagePath: DartImages.productiveDev,
                   topText: 'Fast on All',
                   bottomText: 'Platforms',
                   description:
@@ -219,7 +216,7 @@ class SupportedByGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      ImageAssets.assetsImagesDartImagesSupportedByGoogle,
+      DartImages.supByGoogle,
       width: 180,
     );
   }
@@ -256,8 +253,7 @@ class _DartGitState extends State<DartGit> {
               gitIconColor = DartColorsDark.normalTextColor;
             }),
             cursor: SystemMouseCursors.click,
-            child: SvgPicture.asset(
-                ImageAssets.assetsImagesDartImagesGithubIcon,
+            child: SvgPicture.asset(DartImages.githubIcon,
                 width: 18,
                 colorFilter: ColorFilter.mode(gitIconColor, BlendMode.srcIn)),
           );

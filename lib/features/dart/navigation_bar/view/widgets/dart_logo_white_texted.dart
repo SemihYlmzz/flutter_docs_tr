@@ -20,7 +20,7 @@ class DartLogoWhiteTexted extends ConsumerWidget {
         child: LocalHero(
           tag: UniqueKey,
           child: SvgPicture.asset(
-            ImageAssets.assetsImagesDartImagesDartTextWhite,
+            DartImages.dartTextWhite,
             width: 90,
             fit: BoxFit.fitWidth,
           ),

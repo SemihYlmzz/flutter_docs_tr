@@ -38,10 +38,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/dart_images/
+    - assets/images/dart/
+    - assets/images/flutter/
     - assets/videos/dart_videos/
-
-flutter_assets:
-  assets_path: assets/images/dart_images/
-  output_path: lib/features/dart/constants/
-  filename: image_assets.dart

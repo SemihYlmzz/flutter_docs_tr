@@ -25,17 +25,14 @@ class StableTopContainer extends StatelessWidget {
                 ),
                 TextSpan(
                     text: 'Dart 3 alpha release ',
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () => print('Tap Here onTap'),
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                     style: const TextStyle(color: DartColorsDark.blue)),
                 const TextSpan(
                   text: 'and on-demand content from ',
                 ),
                 TextSpan(
                     text: 'Flutter Forward',
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () =>
-                          print(MediaQuery.of(context).size.width.toString()),
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                     style: const TextStyle(color: DartColorsDark.blue)),
                 const TextSpan(
                   text: '.',

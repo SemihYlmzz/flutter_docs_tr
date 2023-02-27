@@ -44,7 +44,9 @@ class _GoToDocumentState extends State<GoToDocument> {
               child: onHover
                   ? FadeInUp(
                       child: SvgPicture.asset(
-                        ImageAssets.assetsImagesDartImagesDartTextWhite,
+                        DartImages.dartTextWhite,
+
+                        /// TODO:
                         height: 75,
                       ),
                     )
