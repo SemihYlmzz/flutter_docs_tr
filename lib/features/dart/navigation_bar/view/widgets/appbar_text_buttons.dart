@@ -44,7 +44,7 @@ class AppbarTextButton extends ConsumerWidget {
           ),
         ),
         AnimatedContainer(
-          duration: ApplicationConstants.DURATION400,
+          duration: AppDurations.duration370,
           height: 4,
           width: 80,
           color: (currentPage != thisPage || currentPage == DartMainPages.home)

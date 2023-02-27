@@ -1,7 +1,7 @@
-import '../core.dart';
+import '../../core.dart';
 
-class ValidationConstants {
-  final filter = ProfanityFilter();
+class StringValidations {
+  final _filter = ProfanityFilter();
 
   bool emailValidator(String email) {
     final emailValid = RegExp(
@@ -18,7 +18,7 @@ class ValidationConstants {
   }
 
   bool usernameValidator(String name) {
-    final hasProfanity = filter.hasProfanity(name);
+    final hasProfanity = _filter.hasProfanity(name);
     final hasNumOrChar = RegExp(r'^[a-zA-Z]*$').hasMatch(name);
     if (name.length > 2 &&
         name.length < 16 &&
@@ -30,4 +30,3 @@ class ValidationConstants {
     return false;
   }
 }
-// !  Bunlar constants değil doğru yerini bul

@@ -22,3 +22,4 @@ export 'base/base.dart';
 export 'components/components.dart';
 export 'constants/constants.dart';
 export 'init/init.dart';
+export 'utils/utils.dart';

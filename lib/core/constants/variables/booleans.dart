@@ -1,5 +1,5 @@
 import '../../core.dart';
 
-class AppBoleans {
+class AppBooleans {
   static isTablet({context}) => (MediaQuery.of(context).size.width <= 960);
 }

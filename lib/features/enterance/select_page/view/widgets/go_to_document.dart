@@ -46,12 +46,12 @@ class _GoToDocumentState extends State<GoToDocument> {
                       child: SvgPicture.asset(
                         DartImages.dartTextWhite,
 
-                        /// TODO:
+                        /// TODO: Svg Gelmeyebilir. Asset'e çevir
                         height: 75,
                       ),
                     )
                   : FadeIn(
-                      duration: ApplicationConstants.DURATION700,
+                      duration: AppDurations.duration750,
                       child: Text(
                         'dart.dev',
                         style: GoogleFonts.openSans(fontSize: 40),

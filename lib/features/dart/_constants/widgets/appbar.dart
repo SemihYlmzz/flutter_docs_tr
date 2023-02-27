@@ -1,7 +1,7 @@
 import '../../../features.dart';
 
-class DartAppbarTextButtons {
-  static const appbarTextButtons = [
+class DartAppbarWidgets {
+  static const textButtons = [
     AppbarTextButton(buttonText: 'Overview', thisPage: DartMainPages.overview),
     AppbarTextButton(buttonText: 'Docs', thisPage: DartMainPages.docs),
     AppbarTextButton(
