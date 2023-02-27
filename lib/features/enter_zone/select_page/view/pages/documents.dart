@@ -1,4 +1,4 @@
-import '../../../../features/features.dart';
+import '../../../../features.dart';
 
 class DocumentsView extends StatelessWidget {
   const DocumentsView({super.key});

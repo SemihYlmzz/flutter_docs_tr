@@ -6,4 +6,4 @@ export '../core/core.dart';
 export '../providers/providers.dart';
 
 export 'dart/dart.dart';
-export 'documents/documents.dart';
+export 'enter_zone/enter_zone.dart';

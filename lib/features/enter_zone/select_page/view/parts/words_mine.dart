@@ -1,4 +1,4 @@
-import '../../../features.dart';
+import '../../../../features.dart';
 
 class WordsMine extends StatelessWidget {
   const WordsMine({
