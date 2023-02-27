@@ -1,4 +1,4 @@
-import '../core.dart';
+import '../../core.dart';
 
 typedef StringCallback = void Function(String val);
 typedef Uint8ListCallback = void Function(Uint8List? val);

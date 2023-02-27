@@ -2,7 +2,7 @@ import '../../../../features.dart';
 
 class AppbarTextButton extends ConsumerWidget {
   final String buttonText;
-  final MainPages thisPage;
+  final DartMainPages thisPage;
   const AppbarTextButton({
     super.key,
     required this.buttonText,
@@ -47,7 +47,7 @@ class AppbarTextButton extends ConsumerWidget {
           duration: ApplicationConstants.DURATION400,
           height: 4,
           width: 80,
-          color: (currentPage != thisPage || currentPage == MainPages.home)
+          color: (currentPage != thisPage || currentPage == DartMainPages.home)
               ? Colors.transparent
               : DartColorsDark.darkBlue,
         )

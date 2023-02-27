@@ -14,7 +14,8 @@ class DartLogoWhiteTexted extends ConsumerWidget {
       child: GestureDetector(
         onTap: () {
           if (isSendingHome) {
-            ref.read(dartMainPageIndexProvider.notifier).state = MainPages.home;
+            ref.read(dartMainPageIndexProvider.notifier).state =
+                DartMainPages.home;
           }
         },
         child: LocalHero(

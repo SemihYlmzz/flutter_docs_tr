@@ -1,5 +1,5 @@
 import '../features/features.dart';
 
-final dartMainPageIndexProvider = StateProvider<MainPages>((ref) {
-  return MainPages.home;
+final dartMainPageIndexProvider = StateProvider<DartMainPages>((ref) {
+  return DartMainPages.home;
 });

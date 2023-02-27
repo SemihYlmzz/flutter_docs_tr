@@ -8,7 +8,7 @@ PreferredSize baseAppBar(
     PreferredSize(
       preferredSize: Size(MediaQuery.of(context).size.width, 56),
       child: AppBar(
-        backgroundColor: ColorConstants.backgroundColorLight,
+        backgroundColor: AppColors.backgroundColorLight,
         leading: GestureDetector(
           onTap: backFunction ?? () {},
           child: const Icon(

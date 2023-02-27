@@ -20,7 +20,7 @@ class GradientButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
           gradient: const LinearGradient(
             begin: Alignment(0, -4),
-            colors: ColorConstants.MAIN_COLORS_LIST,
+            colors: AppColorList.mainColorsList,
           ),
         ),
         child: ElevatedButton(

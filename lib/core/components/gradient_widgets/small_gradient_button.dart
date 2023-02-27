@@ -13,7 +13,7 @@ class SmallGradientButton extends StatelessWidget {
         width: 55,
         height: 100,
         decoration: BoxDecoration(
-          color: ColorConstants.primaryColor1,
+          color: AppColors.primaryColor1,
           borderRadius: BorderRadius.circular(4),
         ),
         child: Padding(

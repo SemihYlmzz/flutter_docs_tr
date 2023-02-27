@@ -10,7 +10,7 @@ class NotSupWidthScf extends StatelessWidget {
         color: Colors.grey.shade900,
         child: const Center(
           child: Text(
-            ApplicationConstants.NOT_SUPPORTED_WIDTH_TEXT,
+            AppStrings.deviceSizeTooSmall,
             style: TextStyle(color: Colors.white),
             textAlign: TextAlign.center,
           ),

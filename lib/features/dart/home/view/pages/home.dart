@@ -14,16 +14,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   void initState() {
     super.initState();
 
-    _controller =
-        VideoPlayerController.asset(VideoAssets.assetsVideosDartVideosHotReload)
-          ..addListener(() {
-            setState(() {});
-          })
-          ..initialize().then((value) {
-            _controller.setVolume(0);
-            _controller.play();
-            _controller.setLooping(true);
-          });
+    _controller = VideoPlayerController.asset(DartVideos.hotReload)
+      ..addListener(() {
+        setState(() {});
+      })
+      ..initialize().then((value) {
+        _controller.setVolume(0);
+        _controller.play();
+        _controller.setLooping(true);
+      });
   }
 
   @override

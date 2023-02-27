@@ -1,4 +1,4 @@
-enum MainPages {
+enum DartMainPages {
   home,
   overview,
   docs,

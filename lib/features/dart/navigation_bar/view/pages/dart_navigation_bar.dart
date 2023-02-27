@@ -106,7 +106,7 @@ class DartAppBar extends ConsumerWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                if (DartConstants.isWidthSmall(context: context))
+                if (DartConstants.isTablet(context: context))
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: IconButton(
@@ -123,7 +123,7 @@ class DartAppBar extends ConsumerWidget {
               ],
             ),
           ),
-          if (!DartConstants.isWidthSmall(context: context))
+          if (!DartConstants.isTablet(context: context))
             FadeIn(
               child: Row(
                 children: [

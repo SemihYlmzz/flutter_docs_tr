@@ -81,7 +81,7 @@ class BaseScaffold extends StatelessWidget {
             child: Scaffold(
               appBar: appBar,
               backgroundColor:
-                  backgroundColor ?? ColorConstants.backgroundColorLight,
+                  backgroundColor ?? AppColors.backgroundColorLight,
               bottomNavigationBar: bottomNavigationBar,
               bottomSheet: bottomSheet,
               drawer: drawer,

@@ -6,7 +6,7 @@ class GradientCircleContainer extends ConsumerWidget {
     this.boxHeight = 177,
     this.boxWidth = 177,
     this.child,
-    this.linearGradient = ColorConstants.SIDE_LINEAR100,
+    this.linearGradient = AppLinearGradients.sideColorsLinearGradient,
     this.iconData = Icons.add,
     this.iconSize = 140,
   });

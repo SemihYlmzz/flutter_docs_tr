@@ -40,4 +40,5 @@ flutter:
   assets:
     - assets/images/dart/
     - assets/images/flutter/
-    - assets/videos/dart_videos/
+    - assets/videos/dart/
+    - assets/videos/flutter/
