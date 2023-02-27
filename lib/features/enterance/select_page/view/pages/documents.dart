@@ -11,11 +11,29 @@ class DocumentsView extends StatelessWidget {
         width: double.infinity,
         child: const BaseColumn(
           children: [
-            WordsMine(),
+            CreaterWords(),
             SizedBox(height: 32),
-            GoToDocument(),
-            GoToDocument(),
-            GoToDocument(),
+            GoToDocument(
+              translatedSite: TranslatedSite(
+                imagePath: DartImages.dartTextWhite,
+                webSiteName: 'dart.dev',
+                navigatePath: AppRoutes.routeNameDart,
+              ),
+            ),
+            GoToDocument(
+              translatedSite: TranslatedSite(
+                imagePath: DartImages.dartTextWhite,
+                webSiteName: 'dart.dev',
+                navigatePath: AppRoutes.routeNameDart,
+              ),
+            ),
+            GoToDocument(
+              translatedSite: TranslatedSite(
+                imagePath: DartImages.dartTextWhite,
+                webSiteName: 'dart.dev',
+                navigatePath: AppRoutes.routeNameDart,
+              ),
+            ),
           ],
         ),
       ),

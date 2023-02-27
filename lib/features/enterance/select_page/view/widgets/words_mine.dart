@@ -1,7 +1,7 @@
 import '../../../../features.dart';
 
-class WordsMine extends StatelessWidget {
-  const WordsMine({
+class CreaterWords extends StatelessWidget {
+  const CreaterWords({
     super.key,
   });
 
@@ -10,18 +10,18 @@ class WordsMine extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Web sitelerini olabildiğince Türkçeye çevirmeye çalıştım.',
+          EnteranceStrings.wordsMineLine1,
           style: GoogleFonts.openSans(fontSize: 20),
           textAlign: TextAlign.center,
         ),
         Text(
-          'Umarım işinize yarar.',
+          EnteranceStrings.wordsMineLine2,
           style: GoogleFonts.openSans(fontSize: 24),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 16),
         Text(
-          'İyi Çalışmalar',
+          EnteranceStrings.wordsMineLine3,
           style: GoogleFonts.openSans(fontSize: 30),
           textAlign: TextAlign.center,
         ),

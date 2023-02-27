@@ -1,11 +1,10 @@
 import '../../../../features.dart';
 
 class GoToDocument extends StatefulWidget {
-  /// TODO: final String webSiteName;
-  /// TODO: final String imagePath;
-  /// TODO: final String NAVİGATOR;
+  final TranslatedSite translatedSite;
   const GoToDocument({
     super.key,
+    required this.translatedSite,
   });
 
   @override
@@ -13,6 +12,7 @@ class GoToDocument extends StatefulWidget {
 }
 
 class _GoToDocumentState extends State<GoToDocument> {
+  PageController pageController = PageController();
   bool onHover = false;
 
   @override
@@ -21,12 +21,18 @@ class _GoToDocumentState extends State<GoToDocument> {
       padding: const EdgeInsets.all(32.0),
       child: MouseRegion(
         onEnter: (event) {
-          onHover = true;
-          setState(() {});
+          pageController.animateToPage(
+            1,
+            duration: AppDurations.duration300,
+            curve: Curves.decelerate,
+          );
         },
         onExit: (event) {
-          onHover = false;
-          setState(() {});
+          pageController.animateToPage(
+            0,
+            duration: AppDurations.duration200,
+            curve: Curves.easeIn,
+          );
         },
         cursor: MaterialStateMouseCursor.clickable,
         child: GestureDetector(
@@ -40,23 +46,26 @@ class _GoToDocumentState extends State<GoToDocument> {
               color: Colors.white12,
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Center(
-              child: onHover
-                  ? FadeInUp(
-                      child: SvgPicture.asset(
-                        DartImages.dartTextWhite,
+            child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              scrollDirection: Axis.vertical,
+              controller: pageController,
+              children: [
+                Center(
+                  child: SvgPicture.asset(
+                    DartImages.dartTextWhite,
 
-                        /// TODO: Svg Gelmeyebilir. Asset'e çevir
-                        height: 75,
-                      ),
-                    )
-                  : FadeIn(
-                      duration: AppDurations.duration750,
-                      child: Text(
-                        'dart.dev',
-                        style: GoogleFonts.openSans(fontSize: 40),
-                      ),
-                    ),
+                    /// TODO: Svg Gelmeyebilir. Asset'e çevir
+                    height: 75,
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    'dart.dev',
+                    style: GoogleFonts.openSans(fontSize: 40),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

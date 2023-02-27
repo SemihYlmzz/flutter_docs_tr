@@ -5,4 +5,6 @@ export 'colors.dart';
 export 'doubles.dart';
 export 'durations.dart';
 export 'linear_gradients.dart';
+export 'routes.dart';
 export 'strings.dart';
+export 'text_styles.dart';
