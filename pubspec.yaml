@@ -25,14 +25,15 @@ dependencies:
   permission_handler: ^10.2.0
   profanity_filter: ^2.0.0
   responsive_builder: ^0.6.0
+  very_good_analysis: ^4.0.0+1
   video_player: ^2.5.2
 
 dev_dependencies:
+  auto_route_generator: ^5.0.3
+  build_runner: ^2.3.3
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  auto_route_generator: ^5.0.3
-  build_runner: ^2.3.3
 
 flutter:
   uses-material-design: true

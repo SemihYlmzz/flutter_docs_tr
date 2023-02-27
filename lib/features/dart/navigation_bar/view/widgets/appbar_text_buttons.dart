@@ -1,13 +1,13 @@
 import '../../../../features.dart';
 
 class AppbarTextButton extends ConsumerWidget {
-  final String buttonText;
-  final DartMainPages thisPage;
   const AppbarTextButton({
-    super.key,
     required this.buttonText,
     required this.thisPage,
+    super.key,
   });
+  final String buttonText;
+  final DartMainPages thisPage;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -39,7 +39,9 @@ class AppbarTextButton extends ConsumerWidget {
             child: Text(
               buttonText,
               style: const TextStyle(
-                  fontSize: 16, color: DartColorsDark.whiterTextColor),
+                fontSize: 16,
+                color: DartColorsDark.whiterTextColor,
+              ),
             ),
           ),
         ),

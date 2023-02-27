@@ -1,11 +1,11 @@
 export 'dart:io';
 export 'dart:typed_data';
-export 'package:flutter/cupertino.dart' hide WidgetBuilder hide RefreshCallback;
 
 export 'package:animate_do/animate_do.dart';
 export 'package:app_settings/app_settings.dart';
 export 'package:auto_route/annotations.dart';
 export 'package:auto_route/auto_route.dart';
+export 'package:flutter/cupertino.dart' hide WidgetBuilder hide RefreshCallback;
 export 'package:flutter/foundation.dart' hide describeIdentity, shortHash;
 export 'package:flutter/gestures.dart';
 export 'package:flutter/material.dart' hide WidgetBuilder;

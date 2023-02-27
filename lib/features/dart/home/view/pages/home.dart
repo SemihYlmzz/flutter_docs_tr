@@ -19,9 +19,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         setState(() {});
       })
       ..initialize().then((value) {
-        _controller.setVolume(0);
-        _controller.play();
-        _controller.setLooping(true);
+        _controller
+          ..setVolume(0)
+          ..play()
+          ..setLooping(true);
       });
   }
 
@@ -51,9 +52,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         const SizedBox(height: 48),
         const DartGit(),
         const SizedBox(height: 68),
-        Container(
+        const ColoredBox(
           color: DartColorsDark.deepDarkDartColor,
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.only(bottom: 80, left: 56, right: 56),
             child: Wrap(
               alignment: WrapAlignment.spaceEvenly,
@@ -98,18 +99,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 }
 
 class ImagedInfoCard extends StatelessWidget {
-  final String imagePath;
-  final String topText;
-  final String bottomText;
-  final String description;
-
   const ImagedInfoCard({
-    super.key,
     required this.imagePath,
     required this.topText,
     required this.bottomText,
     required this.description,
+    super.key,
   });
+  final String imagePath;
+  final String topText;
+  final String bottomText;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -127,16 +127,18 @@ class ImagedInfoCard extends StatelessWidget {
               Text(
                 topText,
                 style: GoogleFonts.openSans(
-                    fontSize: 28,
-                    color: DartColorsDark.whiterTextColor,
-                    fontWeight: FontWeight.w600),
+                  fontSize: 28,
+                  color: DartColorsDark.whiterTextColor,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               Text(
                 bottomText,
                 style: GoogleFonts.openSans(
-                    fontSize: 28,
-                    color: DartColorsDark.whiterTextColor,
-                    fontWeight: FontWeight.w600),
+                  fontSize: 28,
+                  color: DartColorsDark.whiterTextColor,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
@@ -145,7 +147,9 @@ class ImagedInfoCard extends StatelessWidget {
             description,
             textAlign: TextAlign.center,
             style: GoogleFonts.openSans(
-                fontSize: 16, color: DartColorsDark.normalTextColor),
+              fontSize: 16,
+              color: DartColorsDark.normalTextColor,
+            ),
           ),
         ],
       ),
@@ -155,8 +159,8 @@ class ImagedInfoCard extends StatelessWidget {
 
 class HotReloadVideo extends StatelessWidget {
   const HotReloadVideo({
-    super.key,
     required VideoPlayerController controller,
+    super.key,
   }) : _controller = controller;
 
   final VideoPlayerController _controller;
@@ -196,7 +200,9 @@ class IconTextButton extends StatelessWidget {
                 Text(
                   'Watch video',
                   style: TextStyle(
-                      color: DartColorsDark.blue, fontWeight: FontWeight.w600),
+                    color: DartColorsDark.blue,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ],
             ),
@@ -243,20 +249,24 @@ class _DartGitState extends State<DartGit> {
         const SizedBox(
           width: 4,
         ),
-        StatefulBuilder(builder: (context, setGithubIconState) {
-          return MouseRegion(
-            onEnter: (event) => setGithubIconState(() {
-              gitIconColor = DartColorsDark.whiterTextColor;
-            }),
-            onExit: (event) => setGithubIconState(() {
-              gitIconColor = DartColorsDark.normalTextColor;
-            }),
-            cursor: SystemMouseCursors.click,
-            child: SvgPicture.asset(DartImages.githubIcon,
+        StatefulBuilder(
+          builder: (context, setGithubIconState) {
+            return MouseRegion(
+              onEnter: (event) => setGithubIconState(() {
+                gitIconColor = DartColorsDark.whiterTextColor;
+              }),
+              onExit: (event) => setGithubIconState(() {
+                gitIconColor = DartColorsDark.normalTextColor;
+              }),
+              cursor: SystemMouseCursors.click,
+              child: SvgPicture.asset(
+                DartImages.githubIcon,
                 width: 18,
-                colorFilter: ColorFilter.mode(gitIconColor, BlendMode.srcIn)),
-          );
-        }),
+                colorFilter: ColorFilter.mode(gitIconColor, BlendMode.srcIn),
+              ),
+            );
+          },
+        ),
       ],
     );
   }

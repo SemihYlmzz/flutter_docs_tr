@@ -1,11 +1,11 @@
 import '../../../../features.dart';
 
 class GoToDocument extends StatefulWidget {
-  final TranslatedSite translatedSite;
   const GoToDocument({
-    super.key,
     required this.translatedSite,
+    super.key,
   });
+  final TranslatedSite translatedSite;
 
   @override
   State<GoToDocument> createState() => _GoToDocumentState();
@@ -18,7 +18,7 @@ class _GoToDocumentState extends State<GoToDocument> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(32.0),
+      padding: const EdgeInsets.all(32),
       child: MouseRegion(
         onEnter: (event) {
           pageController.animateToPage(

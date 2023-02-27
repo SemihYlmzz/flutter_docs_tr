@@ -1,16 +1,16 @@
 import '../../../../features.dart';
 
 class DartLogoWhiteTexted extends ConsumerWidget {
-  final bool isSendingHome;
   const DartLogoWhiteTexted({
-    super.key,
     this.isSendingHome = false,
+    super.key,
   });
+  final bool isSendingHome;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0),
+      padding: const EdgeInsets.only(left: 18),
       child: GestureDetector(
         onTap: () {
           if (isSendingHome) {
